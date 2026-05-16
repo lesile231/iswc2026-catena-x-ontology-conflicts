@@ -1,0 +1,46 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.abs
+*.xmpdata
+pdfa.xmpi
+
+# Template archive and original template directory
+paper/CEURART/
+paper/CEURART.zip
+
+# Korean translation (working draft)
+paper/main_plain_ko.md
+
+# Working notes
+paper/section5_review.md
+latex-setup-guide.md
+
+# Raw corpus (clone from https://github.com/eclipse-tractusx/sldt-semantic-models)
+sldt-semantic-models/io.catenax.*/
+sldt-semantic-models/documentation/
+sldt-semantic-models/CODE_OF_CONDUCT.md
+sldt-semantic-models/CONTRIBUTING.md
+sldt-semantic-models/LICENSE
+sldt-semantic-models/NOTICE.md
+sldt-semantic-models/README.md
+sldt-semantic-models/SECURITY.md
+sldt-semantic-models/generate.sh
+
+# OS
+.DS_Store
+
+# Editor / tool metadata
+.omc/
+paper/.omc/
