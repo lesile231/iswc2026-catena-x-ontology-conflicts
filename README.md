@@ -35,7 +35,7 @@ validation/             Classification and validation methodology
 
 ## AI Assistance Disclosure
 
-The initial classification of 40 CONFLICT properties was performed with AI assistance (Claude, Anthropic). All 13 regulatory-driven classifications were subsequently validated by human reading of the EU regulation source texts (Battery Regulation 2023/1542, ESPR 2024/1781, PACT Framework). Of these, 10 were directly validated and 3 were inferred from validated cases with identical patterns. See `validation/METHODOLOGY.md` for details.
+The initial classification of 40 CONFLICT properties was performed with AI assistance (Claude, Anthropic). All 13 regulatory-driven classifications were subsequently validated by human reading of the EU regulation source texts (Battery Regulation 2023/1542, ESPR 2024/1781, PACT Framework). Of these, 10 were directly validated, 1 was spot-checked (ratedSpeed — confirmed ESPR contains no "speed" data field requirement), and 2 were inferred from validated cases with identical patterns. See `validation/METHODOLOGY.md` for details.
 
 ## Reproducing the Analysis
 

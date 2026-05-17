@@ -27,7 +27,7 @@ id,property,model_count,initial_classification,validated_classification,regulato
 26,origin,2,Naming Collision,Naming Collision,,not_required,Shipping origin (Location) vs material origin type (enum: recycled/virgin)
 27,destination,2,Non-regulatory,Non-regulatory,,not_required,Location vs BusinessPartnerSite — uncoordinated design
 28,density,2,Non-regulatory,Non-regulatory,,not_required,float vs decimal — xsd type inconsistency
-29,ratedSpeed,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify ratedSpeed as data field
+29,ratedSpeed,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,spot_checked_failed,Spot-checked: ESPR Annex I (a)-(t) has no 'speed'; full-text search confirms absence
 30,torque,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,validated_failed,ESPR does not mention torque as data field; 100% WG design
 31,maximumPower,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify maximumPower as data field
 32,maximumTorque,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify maximumTorque as data field
