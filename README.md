@@ -8,6 +8,15 @@ Research paper submitted to the 4th International Workshop on Semantic Industria
 
 We analyze 123 SAMM-based aspect models from the Catena-X automotive dataspace, identifying 249 cross-model property overlaps including 40 structural conflicts. We classify these conflicts into three categories — naming collisions, regulatory-driven divergence, and non-regulatory coordination failures — and validate the regulatory cases against EU regulation source texts.
 
+## Key Findings
+
+- 40 structural conflicts identified across 123 Catena-X Aspect Models
+- 6 of 40 (15%) validated as regulatory-driven against EU regulation source texts
+- 6 of 13 conflicts involving regulatory models (46%) show regulatory influence on the structural divergence
+- The majority of conflicts (~65%) are non-regulatory and stem from Working Group coordination gaps
+
+See `validation/METHODOLOGY.md` for the full classification process and `validation/validation_regulatory_cases.csv` for case-by-case rationale.
+
 ## Structure
 
 ```
@@ -19,24 +28,23 @@ sldt-semantic-models/   (submodule) Catena-X corpus + analysis pipeline
     results/                  Generated analysis outputs (CSV, TXT)
 validation/             Classification and validation methodology
   METHODOLOGY.md              Process description + AI assistance disclosure
-  CLASSIFICATION_RUBRIC.md    Formal rubric (C1.1–C1.3, C2.1–C2.4, C3.1–C3.3)
+  CLASSIFICATION_RUBRIC.md    Formal rubric (C1.1-C1.3, C2.1-C2.4, C3.1-C3.3)
   classification_all_40.csv   All 40 CONFLICT properties with classification
-  validation_regulatory_cases.csv  C2.3b validation of 10 regulatory cases
+  validation_regulatory_cases.csv  C2.3b validation of all 13 initially-classified regulatory cases
 ```
 
 ## AI Assistance Disclosure
 
-The initial classification of 40 CONFLICT properties was performed with AI assistance (Claude, Anthropic). All regulatory-driven classifications were subsequently validated by human reading of the EU regulation source texts (Battery Regulation 2023/1542, ESPR 2024/1781, PACT Framework). See `validation/METHODOLOGY.md` for details.
+The initial classification of 40 CONFLICT properties was performed with AI assistance (Claude, Anthropic). All 13 regulatory-driven classifications were subsequently validated by human reading of the EU regulation source texts (Battery Regulation 2023/1542, ESPR 2024/1781, PACT Framework). Of these, 10 were directly validated and 3 were inferred from validated cases with identical patterns. See `validation/METHODOLOGY.md` for details.
 
 ## Reproducing the Analysis
 
 ### 1. Setup
 
-```bash
-# Clone this repository
-git clone --recurse-submodules <repo-url>
+The `sldt-semantic-models/` directory is a git submodule containing the Catena-X corpus. The `--recurse-submodules` flag ensures it is cloned along with this repository.
 
-# Install dependencies
+```bash
+git clone --recurse-submodules https://github.com/lesile231/iswc2026-catena-x-ontology-conflicts.git
 pip install rdflib
 ```
 
