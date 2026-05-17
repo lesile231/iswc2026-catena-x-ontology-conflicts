@@ -1,0 +1,41 @@
+id,property,model_count,initial_classification,validated_classification,regulatory_models_involved,validation_status,notes
+1,value,13,Naming Collision,Naming Collision,,not_required,Different concepts: price / measurement / identifier / parameter
+2,quantity,8,Non-regulatory,Non-regulatory,,not_required,float vs Entity(value+unit) — no shared standard
+3,partTypeInformation,7,Regulatory-driven (A),Regulatory-driven (A),digital_product_passport,validated_partial,ESPR Art 10(1)(a) + Annex III(b)(c)(d) provide some field basis; structural difference driven by purpose (regulatory compliance vs supply chain tracking)
+4,key,7,Naming Collision,Naming Collision,,not_required,URN identifier / classification key / metadata key — different concepts
+5,version,6,Regulatory-driven,Regulatory-driven,pcf + digital_product_passport,validated_clear,PACT Tech Spec §4 mandates integer (0..2^31-1); ESPR does not specify format
+6,childItems,5,Non-regulatory,Non-regulatory,,not_required,ChildData vs ChildItemEntity — BOM version drift
+7,type,5,Naming Collision,Naming Collision,digital_product_passport,not_required,Certificate type / product type / diagnostic type — different concepts
+8,weight,5,Non-regulatory,Non-regulatory,digital_product_passport,not_required,MassCharacteristic vs WeightCharacteristic vs Kilogram — xsd type inconsistency
+9,changedAt,5,Non-regulatory,Non-regulatory,,not_required,dateTime vs dateTimeStamp — xsd type inconsistency
+10,power,4,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,validated_failed,ESPR does not mention power as data field; delegated acts not adopted; 100% WG design
+11,longitude,4,Non-regulatory,Non-regulatory,,not_required,decimal vs float — xsd type inconsistency
+12,latitude,4,Non-regulatory,Non-regulatory,,not_required,decimal vs float — xsd type inconsistency
+13,characteristics,3,Regulatory-driven (B),Regulatory-driven (B),battery_pass + digital_product_passport + transmission_pass,validated_clear,Battery Reg ANNEX XIII (g)-(p) enumerates 10 battery-specific parameters; ESPR has none
+14,materials,3,Regulatory-driven (B),Regulatory-driven (B),battery_pass + digital_product_passport,validated_partial,Battery Reg ANNEX XIII requires detailed chemical composition; structure not specified (framework-level)
+15,materialProperties,3,Non-regulatory,Non-regulatory,,not_required,MaterialProperty vs Property vs MaterialPropertiesEntity — uncoordinated design
+16,dataType,3,Naming Collision,Naming Collision,digital_product_passport,not_required,Measurement type / content type / column type — different meta contexts
+17,emptyWeight,3,Non-regulatory,Non-regulatory,,not_required,integer vs float vs double — xsd type inconsistency
+18,category,3,Naming Collision,Naming Collision,digital_product_passport,not_required,Document source / VDA part / marketplace classification — different concepts
+19,parts,3,Non-regulatory,Non-regulatory,,not_required,SinglePart vs PartEntity vs PartObject — uncoordinated design
+20,header,3,Naming Collision,Naming Collision,digital_product_passport,not_required,Document title (string) / report header (Entity) / message metadata (Entity)
+21,mileage,3,Non-regulatory,Non-regulatory,,not_required,decimal vs integer — xsd type inconsistency
+22,validityPeriod,3,Non-regulatory,Non-regulatory,,not_required,ValidityPeriodEntity vs TimePeriodEntity — uncoordinated design
+23,partClassification,3,Non-regulatory,Non-regulatory,,not_required,PartClassificationEntity vs ClassificationEntity — uncoordinated design
+24,warranty,2,Regulatory-driven (B),Non-regulatory,battery_pass + transmission_pass,validated_failed,Battery Reg ANNEX XIII 1(m) requires single period value only; WarrantyEntity is WG over-implementation
+25,receiverAddress,2,Non-regulatory,Non-regulatory,,not_required,AddressEntity vs ReceiverAddressEntity — uncoordinated design
+26,origin,2,Naming Collision,Naming Collision,,not_required,Shipping origin (Location) vs material origin type (enum: recycled/virgin)
+27,destination,2,Non-regulatory,Non-regulatory,,not_required,Location vs BusinessPartnerSite — uncoordinated design
+28,density,2,Non-regulatory,Non-regulatory,,not_required,float vs decimal — xsd type inconsistency
+29,ratedSpeed,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify ratedSpeed as data field
+30,torque,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,validated_failed,ESPR does not mention torque as data field; 100% WG design
+31,maximumPower,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify maximumPower as data field
+32,maximumTorque,2,Regulatory-driven (C),Non-regulatory,electric_drive_passport + transmission_pass,inferred_failed,Same pattern as power/torque; ESPR does not specify maximumTorque as data field
+33,spareParts,2,Regulatory-driven (A),Regulatory-driven (A),digital_product_passport,validated_partial,ESPR Annex I(b) defines 12+ spare part parameters but as framework; actual fields delegated
+34,manufacturer,2,Regulatory-driven (A),Regulatory-driven (A),digital_product_passport,validated_clear,ESPR Art 27(6) + Annex III(g)(h)(i) explicitly require 5+ structured fields
+35,fuel,2,Non-regulatory,Non-regulatory,,not_required,Fuel vs FuelEntity — nearly identical structures
+36,classification,2,Non-regulatory,Non-regulatory,,not_required,ClassificationEntity vs string enum — uncoordinated design
+37,childProcessSteps,2,Non-regulatory,Non-regulatory,,not_required,ProcessStep entity vs string list — uncoordinated design
+38,amount,2,Naming Collision,Naming Collision,,not_required,Handling unit count (positiveInteger) vs monetary amount (float)
+39,general,2,Regulatory-driven,Naming Collision,pcf,validated_failed,PACT spec has no General grouping; PCF vs quality_core are different domain concepts
+40,request,2,Non-regulatory,Non-regulatory,,not_required,RequestEntity vs ProductionTrackingRequest — same domain uncoordinated design

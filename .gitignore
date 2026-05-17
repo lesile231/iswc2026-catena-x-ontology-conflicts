@@ -23,9 +23,19 @@ paper/CEURART.zip
 # Korean translation (working draft)
 paper/main_plain_ko.md
 
-# Working notes
+# Working notes (Korean drafts, internal memos, derived files)
 paper/section5_review.md
+paper/conflict_classification_full.md
+paper/conflict_classification_full_ko.md
+paper/pattern_c_espr_product_type_ko.md
+paper/feedback_response_ko.md
+paper/email_draft_to_professor.md
+paper/main_plain.md
+paper/main_plain_ko.md
 latex-setup-guide.md
+
+# Analysis working notes (validated results are in validation_targets.csv)
+sldt-semantic-models/analysis/regulation_reference.md
 
 # Raw corpus (clone from https://github.com/eclipse-tractusx/sldt-semantic-models)
 sldt-semantic-models/io.catenax.*/
